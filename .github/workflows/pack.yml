@@ -72,7 +72,7 @@ jobs:
       - uses: MCJack123/ghaction-generate-release-hashes@v3
         with:
           hash-type: sha1
-          file-name: hash.txt
+          file-name: release.zip
       - uses: actions/upload-artifact@v2
         with:
           name: Asset Hashes
