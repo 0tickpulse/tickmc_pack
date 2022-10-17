@@ -66,4 +66,4 @@ jobs:
           git push --force
       - name: Stores hash
         run: |
-          sha1sum release.zip > hash.txt
+          sha1sum release.zip > hash.sha1
