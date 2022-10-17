@@ -49,8 +49,8 @@ jobs:
         uses: actions/checkout@v2
       - name: pull latest and remove old file from repo
         run: |
-          git config --global user.name "usernamehere"
-          git config --global user.email "emailhere"
+          git config --global user.name "0TickPulse"
+          git config --global user.email "0tickpulse@gmail.com"
           git config pull.rebase false
           git pull
           rm -f release.zip
@@ -64,21 +64,6 @@ jobs:
           git add -A
           git commit -m "new pack"
           git push --force
-
-  Generate-Hash:
-    name: Generates the hash and stores it ina  file
-    runs-on: ubuntu-latest
-    steps:
-      # - uses: MCJack123/ghaction-generate-release-hashes@v3
-        # with:
-          # hash-type: sha1
-          # file-name: release.zip
-      # - uses: actions/upload-artifact@v2
-        # with:
-          # name: Asset Hashes
-          # path: hash.txt
-      # - run: |
-          # rm -rf /
-      - name: A
+      - name: Stores hash
         run: |
-          ls > hash.txt
+          sha1sum release.zip > hash.txt
