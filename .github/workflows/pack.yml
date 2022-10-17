@@ -71,4 +71,5 @@ jobs:
     steps:  
       - name: Generates hash
         run: |
+          ls
           sha1sum ./release.zip > hash.txt
