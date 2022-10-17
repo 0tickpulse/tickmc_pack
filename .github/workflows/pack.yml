@@ -68,8 +68,12 @@ jobs:
   Generate-Hash:
     name: Generates the hash and stores it ina  file
     runs-on: ubuntu-latest
-    steps:  
-      - name: Generates hash
-        run: |
-          ls
-          sha1sum ./release.zip > hash.txt
+    steps:
+      - uses: MCJack123/ghaction-generate-release-hashes@v3
+        with:
+          hash-type: sha1
+          file-name: hash.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Asset Hashes
+          path: hash.txt
