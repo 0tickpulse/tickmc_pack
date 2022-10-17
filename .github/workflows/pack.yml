@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: get current time
+        run: echo "TIME=$(date '+%s')" >> $GITHUB_ENV
       - name: create-json
         id: create-json
         uses: jsdaniell/create-json@1.1.2
