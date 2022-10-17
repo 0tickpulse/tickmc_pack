@@ -1,26 +1,73 @@
-name: Push!
-run-name: ${{ github.actor }} is pushing the pack!!
 on: [push]
+
+name: Push
+#test1
 jobs:
-  build:
+  Who-Built:
+    name: Who Built This?
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: pull latest and remove old file from repo
-      run: |
-        git config --global user.name "0tickpulse"
-        git config --global user.email "0tickpulse@gmail.com"
-        git config pull.rebase false
-        git pull
-        rm -f release.zip
-    - name: Archive Release
-      uses: thedoctor0/zip-release@master
-      with:
-        filename: 'release.zip'
-        exclusions: '*.git* /*node_modules/* .editorconfig'
-    - name: push changes to remote
-      run: |
-        git add -A
-        git commit -m "new pack"
-        git push --force
+      - run: echo "${{ github.username }} built this!"
+  Discord-Hook:
+    name: Discord Hook
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+            cat VideoInfo.env >> $GITHUB_ENV
+      - name: get current time
+        run: echo "TIME=$(date '+%s')" >> $GITHUB_ENV
+      - name: create-json
+        id: create-json
+        uses: jsdaniell/create-json@1.1.2
+        with:
+          name: "discord.json"
+          json: '{"embeds":[{"title":"**New Pack Available!**","description":"Pack has been updated!\n${{ github.event.head_commit.message }}","url":"https://github.com/0tickpulse/tickmc_pack/raw/master/release.zip","color":720640,"fields":[{"name":"Modified","value":"<t:${{ env.TIME }}>\n<t:${{ env.TIME }}:R>"},{"name":"Modified by","value":"${{ github.actor }}"}],"thumbnail":{"url":"https://resources.tick-mc.net/images/tickmc.png"}}]}'
+      - name: Discord Webhook Action
+        uses: tsickert/discord-webhook@v4.0.0
+        with:
+          webhook-url: "https://discord.com/api/webhooks/1031517955860746350/zQcgOjyP8XXLZX3GPyU4GZIF7nGOpPguu8pla4pgzGajSaORqnSdWkKDNoapUXihEsBO"
+          raw-data: discord.json
+  Build:
+    name: Build Pack
+    runs-on: ubuntu-latest
+    if: "startsWith(github.event.head_commit.message, '!')"
+    steps:
+      - uses: actions/checkout@v3
+      - run: cat VideoInfo.env >> $GITHUB_ENV
+
+      - name: Print Variables
+        run: |
+          echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+          echo $VIDEO
+      - name: Create Artifacts
+        uses: thedoctor0/zip-release@main
+        with:
+          type: 'zip'
+          filename: 'release.zip'
+          exclusions: '*.git* /*node_modules/* .editorconfig *.env DiscordEmbed.json *.psd /*MISC'
+          recursive-exclusions: '*.psd'
+
+      - name: Create Release
+        id: create_release
+        if: "contains(github.event.head_commit.message, 'release')"
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v0.0.1
+          release_name: Release v0.0.1
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        if: "contains(github.event.head_commit.message, 'release')"
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: "./release.zip"
+          asset_name: "release.zip"
+          asset_content_type: application/zip
