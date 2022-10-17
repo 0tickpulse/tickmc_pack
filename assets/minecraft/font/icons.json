@@ -1,0 +1,7 @@
+{
+    "providers": [
+        {"chars": ["3"], "file": "icons/tickmc.png", "ascent": 32, "height": 32, "type": "bitmap"},
+        {"chars": ["t"], "file": "icons/tickmc.png", "ascent": 64, "height": 64, "type": "bitmap"},
+        {"chars": ["$"], "file": "icons/coin.png", "ascent": 7, "height": 7, "type": "bitmap"}
+    ]
+}
