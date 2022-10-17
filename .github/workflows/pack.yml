@@ -63,3 +63,11 @@ jobs:
           git add -A
           git commit -m "new pack"
           git push --force
+
+  Generate-Hash:
+    name: Generates the hash and stores it ina  file
+    runs-on: ubuntu-latest
+    steps:  
+      - name: Generates hash
+        run: |
+          sha1sum release.zip > hash.txt
