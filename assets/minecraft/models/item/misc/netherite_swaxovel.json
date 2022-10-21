@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/templates/handheld_48x48",
+    "textures": {
+        "layer0": "minecraft:item/misc/netherite_swaxovel"
+    }
+}

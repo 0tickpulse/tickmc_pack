@@ -1,0 +1,31 @@
+[
+    {
+        "section": "Plugin developers",
+        "titles": [
+            {
+                "title": "Denizen",
+                "names": [
+                    "mcmonkey#6666"
+                ]
+            }
+        ]
+    },
+    {
+        "section": "Design",
+        "titles": [
+            {
+                "title": "Core design",
+                "names": [
+                    "0TickPulse#0296"
+                ]
+            },
+            {
+                "title": "Assets",
+                "names": [
+                    "LcorpOfficial#6969",
+                    "Kazzter from itch.io"
+                ]
+            }
+        ]
+    }
+]

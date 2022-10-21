@@ -1,0 +1,33 @@
+{
+    "providers": [
+        { "chars": [
+                "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                "\u0020\u0021\u0022\u0023\u0024\u0025\u0026\u0027\u0028\u0029\u002a\u002b\u002c\u002d\u002e\u002f",
+                "\u0030\u0031\u0032\u0033\u0034\u0035\u0036\u0037\u0038\u0039\u003a\u003b\u003c\u003d\u003e\u003f",
+                "================",
+                "================",
+                "================",
+                "================",
+                "================",
+                "================",
+                "================",
+                "================",
+                "================",
+                "================",
+                "================",
+                "================"
+            ], "file": "minecraft:font/ascii.png", "ascent": 21, "height": 21, "type": "bitmap"
+        },
+        {"chars": ["e"], "file": "elements/element_earth.png", "ascent": 21, "height": 21, "type": "bitmap"},
+        {"chars": ["n"], "file": "elements/element_ender.png", "ascent": 21, "height": 21, "type": "bitmap"},
+        {"chars": ["f"], "file": "elements/element_fire.png", "ascent": 21, "height": 21, "type": "bitmap"},
+        {"chars": ["i"], "file": "elements/element_ice.png", "ascent": 21, "height": 21, "type": "bitmap"},
+        {"chars": ["l"], "file": "elements/element_light.png", "ascent": 21, "height": 21, "type": "bitmap"},
+        {"chars": ["p"], "file": "elements/element_physical.png", "ascent": 21, "height": 21, "type": "bitmap"},
+        {"chars": ["s"], "file": "elements/element_shadow.png", "ascent": 21, "height": 21, "type": "bitmap"},
+        {"chars": ["w"], "file": "elements/element_water.png", "ascent": 21, "height": 21, "type": "bitmap"},
+        {"chars": ["d"], "file": "elements/element_wind.png", "ascent": 21, "height": 21, "type": "bitmap"},
+        {"chars": ["t"], "file": "elements/element_thunder.png", "ascent": 21, "height": 21, "type": "bitmap"}
+    ]
+}
