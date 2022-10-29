@@ -45,8 +45,8 @@ void main() {
         ivec3 data1 = getData(2, 1);
 
         float frameDuration = float(data1.x) * 0.1;
-        bool showShadow = bool(data1.z & 1);
         float frameCount = float(data1.y);
+        bool showShadow = bool(data1.z & 1);
 
         // Remove shadows following dragonmaster's method
         if (!showShadow && all(lessThan(
