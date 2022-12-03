@@ -4,6 +4,6 @@
         "layer0": "minecraft:item/netherite_sword"
     },
     "overrides": [
-        { "predicate": { "custom_model_data": 1 }, "model": "item/misc/netherite_swaxovel" }
+        { "predicate": { "custom_model_data": 1 }, "model": "tickmc:item/misc/netherite_swaxovel" }
     ]
 }

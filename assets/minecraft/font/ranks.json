@@ -1,5 +1,0 @@
-{
-    "providers": [
-        {"chars": ["a"], "file": "ranks/admin.png", "ascent": 7, "height": 7, "type": "bitmap"}
-    ]
-}

@@ -1,5 +1,0 @@
-{
-    "providers": [
-        {"chars": ["LMR"], "file": "icons/dark_rounded_text_background.png", "ascent": 7, "height": 7, "type": "bitmap"}
-    ]
-}

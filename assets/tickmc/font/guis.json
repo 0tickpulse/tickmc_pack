@@ -1,0 +1,5 @@
+{
+    "providers": [
+        {"chars": ["r"], "file": "tickmc:gui/resonance_station.png", "ascent": 13, "height": 222, "type": "bitmap"}
+    ]
+}

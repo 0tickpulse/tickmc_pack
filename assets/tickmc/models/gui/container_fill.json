@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "gui/container_fill"
+        "layer0": "tickmc:gui/container_fill"
     },
     "display": {
         "gui": {

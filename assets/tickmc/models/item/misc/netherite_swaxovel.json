@@ -1,0 +1,6 @@
+{
+    "parent": "tickmc:item/templates/handheld_48x48",
+    "textures": {
+        "layer0": "tickmc:item/misc/netherite_swaxovel"
+    }
+}

@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "minecraft:icons/notification"
+        "layer0": "tickmc:icons/notification"
     }
 }

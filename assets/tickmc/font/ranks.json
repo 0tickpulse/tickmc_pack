@@ -1,0 +1,5 @@
+{
+    "providers": [
+        {"chars": ["a"], "file": "tickmc:ranks/admin.png", "ascent": 7, "height": 7, "type": "bitmap"}
+    ]
+}

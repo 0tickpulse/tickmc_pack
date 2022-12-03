@@ -1,5 +1,0 @@
-{
-    "providers": [
-        {"chars": ["r"], "file": "gui/resonance_station.png", "ascent": 13, "height": 222, "type": "bitmap"}
-    ]
-}
