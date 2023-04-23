@@ -1,5 +1,6 @@
 {
     "providers": [
-        {"chars": ["r"], "file": "tickmc:gui/resonance_station.png", "ascent": 13, "height": 222, "type": "bitmap"}
+        {"chars": ["r"], "file": "tickmc:gui/resonance_station.png", "ascent": 13, "height": 222, "type": "bitmap"},
+        {"chars": ["a"], "file": "tickmc:gui/accessory_bag.png", "ascent": 13, "height": 222, "type": "bitmap"}
     ]
 }
