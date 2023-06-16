@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "tickmc:item/armor/copper_helmet",
+        "layer1": "tickmc:item/armor/copper_helmet"
+    }
+}
