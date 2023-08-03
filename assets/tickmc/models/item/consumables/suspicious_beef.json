@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "tickmc:item/consumables/suspicious_beef"
+    }
+}
