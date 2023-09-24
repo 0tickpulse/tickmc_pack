@@ -1,15 +1,18 @@
 {
     "providers": [
-        {"chars": ["3"], "file": "tickmc:icons/tickmc.png", "ascent": 32, "height": 32, "type": "bitmap"},
-        {"chars": ["t"], "file": "tickmc:icons/tickmc.png", "ascent": 64, "height": 64, "type": "bitmap"},
-        {"chars": ["$"], "file": "tickmc:icons/coin.png", "ascent": 7, "height": 7, "type": "bitmap"},
+        { "chars": ["3"], "file": "tickmc:icons/tickmc.png", "ascent": 32, "height": 32, "type": "bitmap" },
+        { "chars": ["t"], "file": "tickmc:icons/tickmc.png", "ascent": 64, "height": 64, "type": "bitmap" },
+        { "chars": ["$"], "file": "tickmc:icons/coin.png", "ascent": 7, "height": 7, "type": "bitmap" },
 
-        {"chars": ["1"], "file": "tickmc:icons/red_bow.png", "ascent": 7, "height": 7, "type": "bitmap"},
-        {"chars": ["2"], "file": "tickmc:icons/red_material.png", "ascent": 7, "height": 7, "type": "bitmap"},
-        {"chars": ["3"], "file": "tickmc:icons/red_question.png", "ascent": 7, "height": 7, "type": "bitmap"},
-        {"chars": ["4"], "file": "tickmc:icons/red_redstone.png", "ascent": 7, "height": 7, "type": "bitmap"},
-        {"chars": ["5"], "file": "tickmc:icons/red_skull.png", "ascent": 7, "height": 7, "type": "bitmap"},
-        {"chars": ["6"], "file": "tickmc:icons/red_star.png", "ascent": 7, "height": 7, "type": "bitmap"},
-        {"chars": ["7"], "file": "tickmc:icons/red_sword.png", "ascent": 7, "height": 7, "type": "bitmap"}
+        { "chars": ["1"], "file": "tickmc:icons/red_bow.png", "ascent": 7, "height": 7, "type": "bitmap" },
+        { "chars": ["2"], "file": "tickmc:icons/red_material.png", "ascent": 7, "height": 7, "type": "bitmap" },
+        { "chars": ["3"], "file": "tickmc:icons/red_question.png", "ascent": 7, "height": 7, "type": "bitmap" },
+        { "chars": ["4"], "file": "tickmc:icons/red_redstone.png", "ascent": 7, "height": 7, "type": "bitmap" },
+        { "chars": ["5"], "file": "tickmc:icons/red_skull.png", "ascent": 7, "height": 7, "type": "bitmap" },
+        { "chars": ["6"], "file": "tickmc:icons/red_star.png", "ascent": 7, "height": 7, "type": "bitmap" },
+        { "chars": ["7"], "file": "tickmc:icons/red_sword.png", "ascent": 7, "height": 7, "type": "bitmap" },
+        { "chars": ["8"], "file": "tickmc:icons/red_potion.png", "ascent": 7, "height": 7, "type": "bitmap" },
+
+        { "chars": ["e"], "file": "tickmc:icons/energy.png", "ascent": 7, "height": 7, "type": "bitmap" }
     ]
 }
