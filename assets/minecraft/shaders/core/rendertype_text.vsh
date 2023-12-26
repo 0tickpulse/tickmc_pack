@@ -20,15 +20,15 @@ out float vertexDistance;
 out vec4 vertexColor;
 out vec2 texCoord0;
 
-#define ACTIONBAR_OFFSET 64
+#define HH_VERSION 3
+#define HH_OFFSET 67
 
 // Function to convert a vertical ascent into a ID.
 float get_id(float offset) {
-    if (offset <= 0)
-        return 0;
-    return trunc(offset/1000);
+    if (offset <= 0.0)
+        return 0.0;
+    return trunc(offset/1000.0);
 }
-
 
 void main() {
     vec3 pos = Position;
@@ -41,13 +41,14 @@ void main() {
     int guiScale = int(round(pixel.x / (1 / ScreenSize.x)));
     vec2 guiSize = ScreenSize / guiScale;
 
-    float id = get_id((round(guiSize.y - Position.y + ACTIONBAR_OFFSET)) * -1);
-    
+    float id = get_id((round(HH_OFFSET - Position.y)) * -1);
+
     // Detect if GUI text.
     if (id > 99 && Color.a != 0.0) {
-        float yOffset = 0;
-        float xOffset = 0;
+        float yOffset = 0.0;
+        float xOffset = 0.0;
         int layer = 0;
+        vec2 scale = vec2(1, 1);
         bool outlined = false;
 
         switch (int(id)) {
@@ -494,180 +495,227 @@ void main() {
                 outlined = true;
                 break;
             case 184:
+                xOffset = int(guiSize.x * (-50.0/100));
+                yOffset = int(guiSize.y * (50.0/100))-10;
+                layer = 1;
+                outlined = true;
+                break;
+            case 185:
+                xOffset = int(guiSize.x * (-50.0/100));
+                yOffset = int(guiSize.y * (50.0/100))-7;
+                layer = 1;
+                outlined = true;
+                break;
+            case 186:
+                xOffset = int(guiSize.x * (-50.0/100));
+                yOffset = int(guiSize.y * (50.0/100))-20;
+                layer = 1;
+                outlined = true;
+                break;
+            case 187:
+                xOffset = int(guiSize.x * (-50.0/100));
+                yOffset = int(guiSize.y * (50.0/100))-17;
+                layer = 1;
+                outlined = true;
+                break;
+            case 188:
+                xOffset = int(guiSize.x * (-50.0/100));
+                yOffset = int(guiSize.y * (50.0/100))-30;
+                layer = 1;
+                outlined = true;
+                break;
+            case 189:
+                xOffset = int(guiSize.x * (-50.0/100));
+                yOffset = int(guiSize.y * (50.0/100))-27;
+                layer = 1;
+                outlined = true;
+                break;
+            case 190:
                 xOffset = int(guiSize.x * (-100.0/100))+20;
                 yOffset = int(guiSize.y * (100.0/100))-20;
                 layer = 1;
                 break;
-            case 185:
-                xOffset = int(guiSize.x * (-100.0/100))-80;
-                yOffset = int(guiSize.y * (100.0/100))-22;
-                layer = 2;
-                outlined = true;
-                break;
-            case 186:
-                xOffset = int(guiSize.x * (-100.0/100))-80;
-                yOffset = int(guiSize.y * (100.0/100))-19;
-                layer = 2;
-                outlined = true;
-                break;
-            case 187:
-                xOffset = int(guiSize.x * (-100.0/100))-60;
-                yOffset = int(guiSize.y * (100.0/100))-22;
-                layer = 3;
-                outlined = true;
-                break;
-            case 188:
-                xOffset = int(guiSize.x * (-100.0/100))-60;
-                yOffset = int(guiSize.y * (100.0/100))-19;
-                layer = 3;
-                outlined = true;
-                break;
-            case 189:
-                xOffset = int(guiSize.x * (-100.0/100))-66;
-                yOffset = int(guiSize.y * (100.0/100))-22;
-                layer = 4;
-                break;
-            case 190:
-                xOffset = int(guiSize.x * (-100.0/100))+20;
-                yOffset = int(guiSize.y * (100.0/100))-40;
-                layer = 1;
-                break;
             case 191:
                 xOffset = int(guiSize.x * (-100.0/100))-80;
-                yOffset = int(guiSize.y * (100.0/100))-42;
+                yOffset = int(guiSize.y * (100.0/100))-22;
                 layer = 2;
                 outlined = true;
                 break;
             case 192:
                 xOffset = int(guiSize.x * (-100.0/100))-80;
-                yOffset = int(guiSize.y * (100.0/100))-39;
+                yOffset = int(guiSize.y * (100.0/100))-19;
                 layer = 2;
                 outlined = true;
                 break;
             case 193:
                 xOffset = int(guiSize.x * (-100.0/100))-60;
-                yOffset = int(guiSize.y * (100.0/100))-42;
+                yOffset = int(guiSize.y * (100.0/100))-22;
                 layer = 3;
                 outlined = true;
                 break;
             case 194:
                 xOffset = int(guiSize.x * (-100.0/100))-60;
-                yOffset = int(guiSize.y * (100.0/100))-39;
+                yOffset = int(guiSize.y * (100.0/100))-19;
                 layer = 3;
                 outlined = true;
                 break;
             case 195:
                 xOffset = int(guiSize.x * (-100.0/100))-66;
-                yOffset = int(guiSize.y * (100.0/100))-42;
+                yOffset = int(guiSize.y * (100.0/100))-22;
                 layer = 4;
                 break;
             case 196:
                 xOffset = int(guiSize.x * (-100.0/100))+20;
-                yOffset = int(guiSize.y * (100.0/100))-60;
+                yOffset = int(guiSize.y * (100.0/100))-40;
                 layer = 1;
                 break;
             case 197:
                 xOffset = int(guiSize.x * (-100.0/100))-80;
-                yOffset = int(guiSize.y * (100.0/100))-62;
+                yOffset = int(guiSize.y * (100.0/100))-42;
                 layer = 2;
                 outlined = true;
                 break;
             case 198:
                 xOffset = int(guiSize.x * (-100.0/100))-80;
-                yOffset = int(guiSize.y * (100.0/100))-59;
+                yOffset = int(guiSize.y * (100.0/100))-39;
                 layer = 2;
                 outlined = true;
                 break;
             case 199:
                 xOffset = int(guiSize.x * (-100.0/100))-60;
-                yOffset = int(guiSize.y * (100.0/100))-62;
+                yOffset = int(guiSize.y * (100.0/100))-42;
                 layer = 3;
                 outlined = true;
                 break;
             case 200:
                 xOffset = int(guiSize.x * (-100.0/100))-60;
-                yOffset = int(guiSize.y * (100.0/100))-59;
+                yOffset = int(guiSize.y * (100.0/100))-39;
                 layer = 3;
                 outlined = true;
                 break;
             case 201:
                 xOffset = int(guiSize.x * (-100.0/100))-66;
-                yOffset = int(guiSize.y * (100.0/100))-62;
+                yOffset = int(guiSize.y * (100.0/100))-42;
                 layer = 4;
                 break;
             case 202:
                 xOffset = int(guiSize.x * (-100.0/100))+20;
-                yOffset = int(guiSize.y * (100.0/100))-80;
+                yOffset = int(guiSize.y * (100.0/100))-60;
                 layer = 1;
                 break;
             case 203:
                 xOffset = int(guiSize.x * (-100.0/100))-80;
-                yOffset = int(guiSize.y * (100.0/100))-82;
+                yOffset = int(guiSize.y * (100.0/100))-62;
                 layer = 2;
                 outlined = true;
                 break;
             case 204:
                 xOffset = int(guiSize.x * (-100.0/100))-80;
-                yOffset = int(guiSize.y * (100.0/100))-79;
+                yOffset = int(guiSize.y * (100.0/100))-59;
                 layer = 2;
                 outlined = true;
                 break;
             case 205:
                 xOffset = int(guiSize.x * (-100.0/100))-60;
-                yOffset = int(guiSize.y * (100.0/100))-82;
+                yOffset = int(guiSize.y * (100.0/100))-62;
                 layer = 3;
                 outlined = true;
                 break;
             case 206:
                 xOffset = int(guiSize.x * (-100.0/100))-60;
-                yOffset = int(guiSize.y * (100.0/100))-79;
+                yOffset = int(guiSize.y * (100.0/100))-59;
                 layer = 3;
                 outlined = true;
                 break;
             case 207:
                 xOffset = int(guiSize.x * (-100.0/100))-66;
-                yOffset = int(guiSize.y * (100.0/100))-82;
+                yOffset = int(guiSize.y * (100.0/100))-62;
                 layer = 4;
                 break;
             case 208:
                 xOffset = int(guiSize.x * (-100.0/100))+20;
-                yOffset = int(guiSize.y * (100.0/100))-100;
+                yOffset = int(guiSize.y * (100.0/100))-80;
                 layer = 1;
                 break;
             case 209:
                 xOffset = int(guiSize.x * (-100.0/100))-80;
-                yOffset = int(guiSize.y * (100.0/100))-102;
+                yOffset = int(guiSize.y * (100.0/100))-82;
                 layer = 2;
                 outlined = true;
                 break;
             case 210:
                 xOffset = int(guiSize.x * (-100.0/100))-80;
-                yOffset = int(guiSize.y * (100.0/100))-99;
+                yOffset = int(guiSize.y * (100.0/100))-79;
                 layer = 2;
                 outlined = true;
                 break;
             case 211:
                 xOffset = int(guiSize.x * (-100.0/100))-60;
-                yOffset = int(guiSize.y * (100.0/100))-102;
+                yOffset = int(guiSize.y * (100.0/100))-82;
                 layer = 3;
                 outlined = true;
                 break;
             case 212:
                 xOffset = int(guiSize.x * (-100.0/100))-60;
-                yOffset = int(guiSize.y * (100.0/100))-99;
+                yOffset = int(guiSize.y * (100.0/100))-79;
                 layer = 3;
                 outlined = true;
                 break;
             case 213:
+                xOffset = int(guiSize.x * (-100.0/100))-66;
+                yOffset = int(guiSize.y * (100.0/100))-82;
+                layer = 4;
+                break;
+            case 214:
+                xOffset = int(guiSize.x * (-100.0/100))+20;
+                yOffset = int(guiSize.y * (100.0/100))-100;
+                layer = 1;
+                break;
+            case 215:
+                xOffset = int(guiSize.x * (-100.0/100))-80;
+                yOffset = int(guiSize.y * (100.0/100))-102;
+                layer = 2;
+                outlined = true;
+                break;
+            case 216:
+                xOffset = int(guiSize.x * (-100.0/100))-80;
+                yOffset = int(guiSize.y * (100.0/100))-99;
+                layer = 2;
+                outlined = true;
+                break;
+            case 217:
+                xOffset = int(guiSize.x * (-100.0/100))-60;
+                yOffset = int(guiSize.y * (100.0/100))-102;
+                layer = 3;
+                outlined = true;
+                break;
+            case 218:
+                xOffset = int(guiSize.x * (-100.0/100))-60;
+                yOffset = int(guiSize.y * (100.0/100))-99;
+                layer = 3;
+                outlined = true;
+                break;
+            case 219:
                 xOffset = int(guiSize.x * (-100.0/100))-66;
                 yOffset = int(guiSize.y * (100.0/100))-102;
                 layer = 4;
                 break;
         }
 
-        if (Position.z != 0.0 || outlined) {
-            pos.y -= (id*1000) + 500 - ACTIONBAR_OFFSET;
+        // -90.0 is required for forge comp
+        if ((Position.z != 0.0 && Position.z != -90.0) || outlined) {
+            pos.y -= (id*1000) + 500 + HH_OFFSET;
             pos.x -= (guiSize.x * 0.5);
+
+            pos.x *= scale.x;
+            pos.y *= scale.y;
+
+            pos.y += guiSize.y;
+            // force align guiScale 3
+            if (guiScale == 3) {
+                pos.x += 1.45;
+            }
+
             pos -= vec3(xOffset, yOffset, 0.0);
             pos.z += layer;
         }
