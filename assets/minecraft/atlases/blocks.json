@@ -1,0 +1,14 @@
+{
+    "sources": [
+        {
+            "type": "directory",
+            "source": "entity",
+            "prefix": "entity/"
+        },
+        { "type": "directory", "source": "item", "prefix": "item/" },
+        { "type": "directory", "source": "tickmc", "prefix": "tickmc/" },
+        { "type": "directory", "source": "vfx", "prefix": "vfx/" },
+        { "type": "directory", "source": "mythic", "prefix": "mythic/" },
+        { "type": "directory", "source": "gui", "prefix": "gui/" }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "providers": [
+        { "chars": ["b"], "file": "tickmc:lore/main_banner.png", "ascent": 20, "height": 42, "type": "bitmap" }
+    ]
+}
