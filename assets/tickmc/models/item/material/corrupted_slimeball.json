@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer-1": "tickmc:icons/notification"
+        "layer0": "tickmc:item/material/corrupted_slimeball"
     }
 }

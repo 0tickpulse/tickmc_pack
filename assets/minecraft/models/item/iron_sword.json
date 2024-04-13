@@ -4,6 +4,7 @@
         "layer0": "minecraft:item/iron_sword"
     },
     "overrides": [
-        { "predicate": { "custom_model_data": 1 }, "model": "tickmc:item/weapons/staff_of_waves" }
+        { "predicate": { "custom_model_data": 1 }, "model": "tickmc:item/weapons/staff_of_waves" },
+        { "predicate": { "custom_model_data": 10 }, "model": "tickmc:item/weapons/withered_staff" }
     ]
 }

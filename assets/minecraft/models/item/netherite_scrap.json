@@ -9,6 +9,12 @@
         { "predicate": { "custom_model_data": 3 }, "model": "tickmc:item/vfx/fireslash1_2" },
         { "predicate": { "custom_model_data": 4 }, "model": "tickmc:item/vfx/fireslash1_3" },
         { "predicate": { "custom_model_data": 5 }, "model": "tickmc:item/vfx/fireslash1_4" },
-        { "predicate": { "custom_model_data": 6 }, "model": "tickmc:item/vfx/fireslash1_5" }
+        { "predicate": { "custom_model_data": 6 }, "model": "tickmc:item/vfx/fireslash1_5" },
+        { "predicate": { "custom_model_data": 10 }, "model": "tickmc:item/vfx/spear_of_corruption" },
+        { "predicate": { "custom_model_data": 21 }, "model": "tickmc:item/vfx/withered_blade_slash_1_0" },
+        { "predicate": { "custom_model_data": 22 }, "model": "tickmc:item/vfx/withered_blade_slash_1_1" },
+        { "predicate": { "custom_model_data": 23 }, "model": "tickmc:item/vfx/withered_blade_slash_1_2" },
+        { "predicate": { "custom_model_data": 24}, "model": "tickmc:item/vfx/withered_blade_slash_1_3" },
+        { "predicate": { "custom_model_data": 25}, "model": "tickmc:item/vfx/withered_blade_slash_1_4" }
     ]
 }
